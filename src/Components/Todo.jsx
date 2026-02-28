@@ -13,11 +13,23 @@ const Todo = () => {
     if (!value) return;
     setTodos([...todos, {no:count++,text: value, display: ""}]);
     inputRef.current.value = "";
+    localStorage.setItem("todos_Count", count); //to keep the track of the count of todos when the page is refreshed
   }
 
+  // useEffect to update the localStorage whenever the todos state changes 
+  // we are using setTimeout to make sure that the localStorage is updated after the state is updated and not before that
   useEffect(() => {
-    console.log(todos);
+    setTimeout(() => {
+      console.log(todos);
+      localStorage.setItem("todos", JSON.stringify(todos));
+    },100);
   }, [todos])
+
+  // useEffect to get the todos from the localStorage when the component is mounted and set it to the state and also get the count of todos from the localStorage and set it to the count variable
+  useEffect(() => {
+    setTodos(JSON.parse(localStorage.getItem("todos")));
+    count = localStorage.getItem("todos_Count");
+  },[])
 
   return (
     <div className='todo'>
