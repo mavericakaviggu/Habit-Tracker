@@ -5,6 +5,14 @@ import uncheck from './Assets/uncheck.png';
 
 const TodoItems = ({ no, display, text, setTodos }) => {
 
+  // function to delete the todo item when the user clicks on the cross button and also update the localStorage and the state of the todos
+  const deleteTodo = (no) =>{
+    let data = JSON.parse(localStorage.getItem("todos"));
+    data = data.filter(item => item.no !== no);
+    localStorage.setItem("todos", JSON.stringify(data));
+    setTodos(data);
+  }
+
   // toggle function to toggle the display of the text when the user clicks on the todo item and also update the localStorage and the state of the todos
   const toggle = () =>{
     let data = JSON.parse(localStorage.getItem("todos"));
@@ -33,7 +41,7 @@ const TodoItems = ({ no, display, text, setTodos }) => {
           {text}
         </div>
       </div>
-      <img className="todoitems-cross" src={cross} alt="" />
+      <img className="todoitems-cross" onClick={()=>{deleteTodo(no)}} src={cross} alt="" />
       
     </div>
   )
