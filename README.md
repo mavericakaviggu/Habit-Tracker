@@ -14,3 +14,8 @@ The React Compiler is currently not compatible with SWC. See [this issue](https:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Steps to run the HabitTracker application
+Navigate to the Habit Tracker folder in terminal and execute the below command(once you open the folder, the sub folder should be of src, public)
+>> npm run dev
+this will run the application and a link will be provided in the terminal, 

@@ -13,7 +13,7 @@ const Todo = () => {
     if (!value) return;
     setTodos([...todos, {no:count++,text: value, display: ""}]);
     inputRef.current.value = "";
-    localStorage.setItem("todos_Count", count); //to keep the track of the count of todos when the page is refreshed
+    localStorage.setItem("todos_Count", count); //to keep the track of the count of todos in localstorage when the page is refreshed
   }
 
   // useEffect to update the localStorage whenever the todos state changes 
@@ -40,7 +40,7 @@ const Todo = () => {
       </div>
       <div className="todo-list">
         {todos.map((item, index) => {
-          return <TodoItems key={index} no={item.no} display={item.display} text={item.text}/>;
+          return <TodoItems key={index} setTodos={setTodos} no={item.no} display={item.display} text={item.text}/>;
         })}
       </div>
     </div>
