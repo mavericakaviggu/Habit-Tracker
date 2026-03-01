@@ -19,3 +19,5 @@ Steps to run the HabitTracker application
 Navigate to the Habit Tracker folder in terminal and execute the below command(once you open the folder, the sub folder should be of src, public)
 >> npm run dev
 this will run the application and a link will be provided in the terminal, 
+
+checking commit
