@@ -25,7 +25,8 @@ const TodoItems = ({ no, display, text, setTodos }) => {
 
   return (
     <div className='todoitems'>
-      <div className="todoitems-container" onClick={()=>{toggle(no)}}>
+      {/* template literals using backticks for dynamic styling */}
+      <div className={`todoitems-container ${display}`} onClick={()=>{toggle(no)}}>
         {/* to toggle the display of the button(checked/unchecked) */}
         {display===""?<img src={uncheck} alt="" />:<img src={check} alt="" />}
         <div className="todoitems-text">

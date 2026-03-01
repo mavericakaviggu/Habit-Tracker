@@ -32,3 +32,7 @@
     object-fit: contain; 
     color: #404040;
     cursor: pointer; }
+
+.line-through {
+    text-decoration: line-through solid #adadad 3px;
+}
