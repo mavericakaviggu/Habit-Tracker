@@ -20,4 +20,3 @@ Navigate to the Habit Tracker folder in terminal and execute the below command(o
 >> npm run dev
 this will run the application and a link will be provided in the terminal, 
 
-checking commit
