@@ -44,8 +44,15 @@
     border-radius: 6px;
 }
 .input img{
-    margin: 0px 30px;
+    margin: 30px 30px;
+    width: 40px; 
+    height: 40px; 
+    object-fit: contain;
+    border: 7px;
+    border-radius: 50%;
+    padding: 5px;
 }
+
 .input input{
     height: 50px;
     width: 400px;
