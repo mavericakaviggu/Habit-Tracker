@@ -20,3 +20,6 @@ Navigate to the Habit Tracker folder in terminal and execute the below command(o
 >> npm run dev
 this will run the application and a link will be provided in the terminal, 
 
+For the login/sign up page (just the display page and not the working)
+https://www.youtube.com/watch?v=8QgQKRcAUvM&list=PLjwm_8O3suyMMs7kfDD-p-yIhlmEgJkDj&index=10
+
