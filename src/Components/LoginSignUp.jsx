@@ -26,8 +26,8 @@ const LoginSignUp = () => {
         </div>
         <div className="forgot-password">Forgot Password? <span>Click here</span></div>
         <div className="submit-container">
-          <button type="submit">Sign Up</button>
-          <button type="button">Login</button>
+          <div className="submit">Sign Up</div>
+          <div className="submit">Login</div>
         </div>
       </div>
     </div>
